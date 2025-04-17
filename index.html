@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tilda PWA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Точка Интереса — отдых в Крыму">
+  <meta name="theme-color" content="#CC2B2B"> <!-- Цвет темы на мобильных устройствах -->
+  <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Разрешение использовать PWA на iOS -->
 
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="https://izuver55russss.github.io/Q/manifest.json">
+  <title>Точка Интереса</title>
 
-    <!-- Иконки -->
-    <link rel="apple-touch-icon" href="https://izuver55russss.github.io/T/icon-192.png">
-    <meta name="theme-color" content="#ffffff">
+  <!-- PWA Manifest (ссылка на manifest.json) -->
+  <link rel="manifest" href="https://izuver55russss.github.io/Q/manifest.json">
 
-    <!-- Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('https://izuver55russss.github.io/Q/sw.js')
-                    .then(function (registration) {
-                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                    }, function (err) {
-                        console.log('ServiceWorker registration failed: ', err);
-                    });
-            });
-        }
-    </script>
+  <!-- Иконки -->
+  <link rel="icon" href="https://izuver55russss.github.io/Q/icon-192.png" sizes="192x192">
+  <link rel="icon" href="https://izuver55russss.github.io/Q/icon-512.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="https://izuver55russss.github.io/Q/icon-192.png"> <!-- Для iOS -->
+  
+  <!-- Устанавливаем цвет фона и цвет темы для браузера -->
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Сценарий для регистрации сервис-воркера -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('https://izuver55russss.github.io/Q/sw.js')
+          .then(function(registration) {
+            console.log('Service Worker зарегистрирован с областью: ', registration.scope);
+          })
+          .catch(function(error) {
+            console.log('Ошибка регистрации Service Worker: ', error);
+          });
+      });
+    }
+  </script>
+  
+  <!-- Описание мета-данных для iOS -->
+  <meta name="apple-mobile-web-app-title" content="Точка Интереса">
+  <meta name="mobile-web-app-capable" content="yes">
+
 </head>
 <body>
     <h1>Сайт разработан и предназначем для Точки Интереса!</h1>
