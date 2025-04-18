@@ -1,19 +1,23 @@
 {
   "name": "Точка Интереса",
-  "short_name": "Точка",
+  "short_name": "Точка Интереса",
   "description": "Выбери идеальный отдых в Крыму",
+  "lang": "ru",
+  "dir": "ltr",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#ffffff",
-  "theme_color": "#cc2b2b",
+  "theme_color": "#CC2B2B",
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/izuver55russss/Q/main/icon-192.png",
+      "src": "https://izuver55russss.github.io/Q/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://raw.githubusercontent.com/izuver55russss/Q/main/icon-512.png",
+      "src": "https://izuver55russss.github.io/Q/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
